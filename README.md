@@ -93,14 +93,12 @@ Launch for simulation mode (Gazebo or RViz only).
 
 # I think these are minimum required files to complete the project
 
-✔ `camera_publisher.py`
-✔ `aruco_detector.py`
-✔ `lidar_obstacle_detector.py`
-✔ `motion_controller.py`
-✔ `full_system.launch`
-✔ `package.xml`
-✔ `CMakeLists.txt`
+ `camera_publisher.py`
+ `aruco_detector.py`
+ `lidar_obstacle_detector.py`
+ `motion_controller.py`
+ `full_system.launch`
+ `package.xml`
+ `CMakeLists.txt`
 
 ---
-
-Let me know when you are ready—I can generate **all of these files fully coded** so you can drop them into your workspace and start running immediately.
