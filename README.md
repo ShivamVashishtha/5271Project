@@ -102,3 +102,10 @@ Launch for simulation mode (Gazebo or RViz only).
  `CMakeLists.txt`
 
 ---
+
+
+
+How to Run based on GPT:
+
+chmod +x camera_publisher.py
+rosrun <your_package_name> camera_publisher.py
