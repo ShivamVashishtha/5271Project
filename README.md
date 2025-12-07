@@ -108,7 +108,30 @@ Launch for simulation mode (Gazebo or RViz only).
 How to Run based on GPT:
 
 chmod +x camera_publisher.py
-rosrun <your_package_name> camera_publisher.py
+ros2 run <your_package_name> camera_publisher
+
+
+chmod +x aruco_detector.py
+ros2 run <your_package_name> aruco_detector
+
+
+
+setup.py must include:
+
+entry_points={
+    'console_scripts': [
+        'camera_publisher = <your_package_name>.camera_publisher:main',
+        'aruco_detector = <your_package_name>.aruco_detector:main'
+    ],
+},
+
+so commands become:
+
+ros2 run <package_name> camera_publisher
+ros2 run <package_name> aruco_detector
+
+
+
 
 ---
 
@@ -119,3 +142,7 @@ save full_system.launch:
 run:
 
 roslaunch <your_package_name> full_system.launch
+
+
+
+setup.py:
