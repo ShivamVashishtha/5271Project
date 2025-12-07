@@ -113,7 +113,9 @@ rosrun <your_package_name> camera_publisher.py
 ---
 
 save full_system.launch:
+
 <your_package_name>/launch/full_system.launch
 
 run:
+
 roslaunch <your_package_name> full_system.launch
