@@ -1,0 +1,19 @@
+<launch>
+
+    <!-- start camera publisher node -->
+    <node pkg="<your_package_name>" type="camera_publisher.py" name="camera_publisher" output="screen">
+    </node>
+
+    <!-- start ArUco detection node -->
+    <node pkg="<your_package_name>" type="aruco_detector.py" name="aruco_detector" output="screen">
+    </node>
+
+    <!-- start LiDAR obstacle detection node -->
+    <node pkg="<your_package_name>" type="lidar_obstacle_detector.py" name="lidar_obstacle_detector" output="screen">
+    </node>
+
+    <!-- start motion/navigation controller node -->
+    <node pkg="<your_package_name>" type="motion_controller.py" name="motion_controller" output="screen">
+    </node>
+
+</launch>
