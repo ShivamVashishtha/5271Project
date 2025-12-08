@@ -15,8 +15,8 @@ class ObstacleDetector:
         self.sub_scan = rospy.Subscriber("/scan", LaserScan, self.scan_callback)
 
         # Parameters: distance threshold (meters) and front angle range (degrees)
-        self.distance_threshold = rospy.get_param("~distance_threshold", 0.4)
-        self.front_angle_deg = rospy.get_param("~front_angle_deg", 30.0)
+        self.distance_threshold = rospy.get_param("~distance_threshold", 0.36)
+        self.front_angle_deg = rospy.get_param("~front_angle_deg", 36.0)
 
     def scan_callback(self, msg: LaserScan):
         # Calculate index range corresponding to front angles (assuming 0 rad is straight ahead)

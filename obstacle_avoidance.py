@@ -14,10 +14,10 @@ class ObstacleAvoidance:
         )
         self.pub_cmd = rospy.Publisher("/cmd_vel", Twist, queue_size=1)
 
-        self.rate = rospy.Rate(10)  # 10 Hz
+        self.rate = rospy.Rate(30)  # 30 Hz
 
         # Right turn angular velocity (negative value indicates right turn)
-        self.turn_speed = rospy.get_param("~turn_speed", -0.5)
+        self.turn_speed = rospy.get_param("~turn_speed", -0.6)
 
     def obstacle_callback(self, msg: Bool):
         self.obstacle = msg.data
@@ -27,7 +27,7 @@ class ObstacleAvoidance:
         while not rospy.is_shutdown():
             if self.obstacle:
                 # When obstacle detected ahead: stop forward movement, only turn right
-                twist.linear.x = 0.0
+                twist.linear.x = -0.03
                 twist.angular.z = self.turn_speed
                 self.pub_cmd.publish(twist)
             # When no obstacle: don't publish, let teleop's /cmd_vel take over
